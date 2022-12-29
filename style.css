@@ -1,0 +1,158 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Trebuchet MS", sans-serif;
+    background-color: #f0f0f0;
+}
+
+.header {
+    width: 95%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.footer {
+    margin-top: 20px;
+    color: #6e6e6e;
+    font-size: 15px;
+    font-family: "Trebuchet MS", sans-serif;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+h1 {
+    position:fixed;
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    color: #6e6e6e;
+}
+
+/* Фон для размещения фотографий */
+.container {
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.images {
+    margin-top: 20px;
+    display: grid;
+    /* Количество колонок */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.image {
+    width: 350px;
+}
+
+/* Увеличение при наведении на фотографию */
+.image:hover {
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    transform:scale(1.25);
+}
+
+/* Затемнение заднего фона при открытии отдельной фотографии */
+.overlay { 
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/* Окно просмотра отдельной фотографии */
+.modal {
+    width: 1000px;
+    height: 600px;
+    position: fixed;
+    background-color: rgb(128, 128, 128);
+    left: 50%;
+    top: 50%;
+    /* Сдвиг рамки по осям, чтобы расположить ее по центру */
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+    display: none;
+}
+
+#active-image {
+    width: 100%;
+}
+
+#close {
+    position: absolute;
+    color: #f0f0f0;
+    font-size: 30px;
+    right: -30px;
+    top: -30px;
+    cursor: pointer;
+}
+
+#left, #right {
+    font-size: 35px;
+    color: #f0f0f0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#left {
+    left: -200px;
+}
+
+#right {
+   right : -200px;
+}
+
+#play {
+    font-size: 20px;
+    color: #f0f0f0;
+    position: absolute;
+    cursor: pointer;
+    right : -30px;
+    margin-top: 20px;
+}
+
+#pause {
+    font-size: 20px;
+    color: #f0f0f0;
+    position: absolute;
+    cursor: pointer;
+    right : -27px;
+    margin-top: 50px;
+}
+
+#plus {
+    font-size: 30px;
+    margin-top: 20px;
+    color: #6e6e6e;
+    position: absolute;
+    cursor: pointer;
+    right : 140px;
+    position: fixed;
+}
+
+#minus {
+    font-size: 30px;
+    margin-top: 60px;
+    color: #6e6e6e;
+    position: absolute;
+    cursor: pointer;
+    right : 140px;
+    position: fixed;
+}
